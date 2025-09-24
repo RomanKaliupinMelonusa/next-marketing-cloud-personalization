@@ -1,0 +1,85 @@
+<% 
+const body = `
+<div class="row">
+    <div class="col-lg-10 mx-auto">
+        <h1 class="display-5 fw-bold text-primary mb-4">
+            📋 About This Application
+        </h1>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h3>🛠️ Technology Stack</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Backend:</strong> Node.js with Express framework</li>
+                    <li class="list-group-item"><strong>Template Engine:</strong> EJS (Embedded JavaScript)</li>
+                    <li class="list-group-item"><strong>CORS:</strong> Configured to allow all origins</li>
+                    <li class="list-group-item"><strong>CSP:</strong> Permissive Content Security Policy</li>
+                    <li class="list-group-item"><strong>Security:</strong> Helmet.js for security headers</li>
+                    <li class="list-group-item"><strong>Styling:</strong> Bootstrap 5 + Custom CSS</li>
+                </ul>
+            </div>
+            
+            <div class="col-md-6">
+                <h3>🔧 Key Features</h3>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">✅ Permissive CORS allowing all domains</li>
+                    <li class="list-group-item">✅ CSP allows all sources and inline content</li>
+                    <li class="list-group-item">✅ Server-side rendering with EJS</li>
+                    <li class="list-group-item">✅ Responsive design with Bootstrap</li>
+                    <li class="list-group-item">✅ Static file serving</li>
+                    <li class="list-group-item">✅ Form handling capabilities</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h3>🌐 CORS Configuration Details</h3>
+            <div class="alert alert-info">
+                <p><strong>Origin Policy:</strong> <code>*</code> - Allows requests from any domain</p>
+                <p><strong>Methods:</strong> GET, POST, PUT, DELETE, OPTIONS - All standard HTTP methods</p>
+                <p><strong>Headers:</strong> <code>*</code> - Allows any custom headers</p>
+                <p><strong>Credentials:</strong> <code>true</code> - Allows cookies and authentication headers</p>
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <h3>🔒 Content Security Policy Details</h3>
+            <div class="alert alert-warning">
+                <p><strong>Note:</strong> This CSP configuration is extremely permissive and allows:</p>
+                <ul>
+                    <li>Scripts from any source, including inline scripts and eval()</li>
+                    <li>Styles from any source, including inline styles</li>
+                    <li>Images from any source, including data: and blob: URLs</li>
+                    <li>All other resource types from any domain</li>
+                    <li>Cross-origin connections to any endpoint</li>
+                </ul>
+                <p><strong>⚠️ Security Warning:</strong> This configuration is suitable for development but should be restricted in production environments.</p>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h3>📁 Project Structure</h3>
+            <pre class="bg-dark text-light p-3 rounded"><code>├── app.js                 # Main Express server
+├── package.json           # Project dependencies
+├── views/                 # EJS templates
+│   ├── layout.ejs        # Base layout template
+│   ├── index.ejs         # Home page
+│   ├── about.ejs         # About page
+│   ├── contact.ejs       # Contact page
+│   └── 404.ejs           # Error page
+├── public/               # Static assets
+│   ├── css/             # Stylesheets
+│   ├── js/              # Client-side JavaScript
+│   └── images/          # Image files
+└── README.md            # Documentation</code></pre>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="/" class="btn btn-primary me-3">← Back to Home</a>
+            <a href="/contact" class="btn btn-outline-primary">Contact Us →</a>
+        </div>
+    </div>
+</div>
+`;
+%>
+<%- include('layout', { body: body }) %>

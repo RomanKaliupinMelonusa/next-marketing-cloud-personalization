@@ -1,0 +1,28 @@
+{
+  "name": "next-marketing-cloud-personalization",
+  "version": "1.0.0",
+  "description": "Node.js + Express application with EJS templating, featuring permissive CORS and Content Security Policies",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "ejs",
+    "cors",
+    "csp",
+    "marketing-cloud",
+    "personalization"
+  ],
+  "author": "Marketing Cloud Team",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0"
+  }
+}
