@@ -1,0 +1,71 @@
+<% 
+const body = `
+<div class="row">
+    <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-4 fw-bold text-primary mb-4">
+            🚀 Welcome to Marketing Cloud Personalization
+        </h1>
+        <p class="lead mb-4">
+            This is a Node.js + Express application with EJS templating, featuring permissive CORS and Content Security Policies that allow everything from all services and domains.
+        </p>
+        
+        <div class="row mt-5">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-primary">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">🌐 CORS Policy</h5>
+                        <p class="card-text">Configured to allow all origins, methods, and headers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-success">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">🔒 CSP Policy</h5>
+                        <p class="card-text">Allows all sources, inline scripts, and external resources</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-info">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">⚙️ Express + EJS</h5>
+                        <p class="card-text">Server-side rendering with EJS templating engine</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h3>Security Policies Configuration</h3>
+            <div class="text-start mt-4">
+                <h5>CORS Configuration:</h5>
+                <pre class="bg-light p-3 rounded"><code>cors({
+  origin: '*', // Allow all origins
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['*'],
+  credentials: true
+})</code></pre>
+
+                <h5 class="mt-4">Content Security Policy:</h5>
+                <pre class="bg-light p-3 rounded"><code>contentSecurityPolicy: {
+  directives: {
+    defaultSrc: ["'self'", "*"],
+    scriptSrc: ["'self'", "*", "'unsafe-inline'", "'unsafe-eval'"],
+    styleSrc: ["'self'", "*", "'unsafe-inline'"],
+    imgSrc: ["'self'", "*", "data:", "blob:"],
+    // ... all other directives set to allow everything
+  }
+}</code></pre>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <a href="/about" class="btn btn-primary btn-lg me-3">Learn More</a>
+            <a href="/contact" class="btn btn-outline-primary btn-lg">Get in Touch</a>
+        </div>
+    </div>
+</div>
+`;
+%>
+<%- include('layout', { body: body }) %>
